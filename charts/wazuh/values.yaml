@@ -268,6 +268,7 @@ indexer:
       ##
       repository: bitnamilegacy/os-shell
       tag: 12-debian-12-r43
+
   ## Configuration of the indexer env vars, this should be only changed if needed.
   ## @skip indexer.env.OPENSEARCH_JAVA_OPTS
   ## @skip indexer.env.CLUSTER_NAME
@@ -305,6 +306,9 @@ indexer:
     statefulSet: {}
     pod: {}
     container: {}
+
+  ## @param indexer.extraInitContainers Additional init containers for the indexer.
+  extraInitContainers: []
 
 ## @section indexer configuration of the wazuh dashboard. Kibana for elasticsearch with Wazuh plugins
 ## pre-installed
